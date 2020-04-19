@@ -12,8 +12,7 @@ func hello(c echo.Context) error {
 
 func main() {
 	e := echo.New()
-	//e.Use(middleware.Static("./static"))
-	e.File("/aaa", "/*", middleware.Static("./static"))
+	e.Use(middleware.Static("./static"))
 	e.GET("/hello", hello)
 	e.Logger.Fatal(e.Start(":1323"))
 }

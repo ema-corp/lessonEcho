@@ -15,7 +15,7 @@ func main() {
 
 	// ミドルウェアを利用してCORSを設定
 	e.Use(middleware.CORSWithConfig(middleware.CORSConfig{
-		AllowOrigins: []string{"https://ema.com", "https://echo.com"},  // 許可するオリジンを設定。すべてのオリジンを許可する場合は「*」を設定
+		AllowOrigins: []string{"https://ema.com", "https://echo.com"},                        // 許可するオリジンを設定。すべてのオリジンを許可する場合は「*」を設定
 		AllowHeaders: []string{echo.HeaderOrigin, echo.HeaderContentType, echo.HeaderAccept}, // 許可するヘッダを設定。
 	}))
 

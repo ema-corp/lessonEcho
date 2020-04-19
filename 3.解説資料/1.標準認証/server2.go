@@ -41,7 +41,7 @@ func main() {
 
 	// BasicAuthWithConfigを直接使う
 	e.Use(middleware.BasicAuthWithConfig(middleware.BasicAuthConfig{
-		Skipper: mySkipper,
+		Skipper:   mySkipper,
 		Validator: myValidator,
 		Realm:     "myRealm",
 	}))

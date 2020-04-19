@@ -14,6 +14,7 @@ func main() {
 	e := echo.New()
 	e.Use(middleware.Logger())
 	e.Static("/new", "./static")
+	e.Static("/new2", "./static2")
 	e.File("file/test", "./static/test.html")
 	e.GET("/hello", hello)
 	e.Logger.Fatal(e.Start(":1323"))
